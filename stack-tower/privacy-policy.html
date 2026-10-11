@@ -4,36 +4,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stack Tower Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f1028; --bg2: #1a1f4f; --card: rgba(255,255,255,0.06); --line: rgba(255,255,255,0.14);
-    --text: #f2f2fa; --muted: #b9b9d3; --gold: #ffcd3c; --accent: #8f9dff;
+    --bg: #f2f0fa; --surface: #ffffff; --ink: #1b1834; --muted: #5d5a73; --line: #e2def2;
+    --accent: #4a33b3; --accent-soft: #ebe7fb;
+    --display: "Bricolage Grotesque", "Familjen Grotesk", system-ui, sans-serif;
+    --serif: "Source Serif 4", "Literata", Georgia, serif;
+    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0; color: var(--text); background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 60%);
-    background-attachment: fixed; min-height: 100vh;
-    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0; color: var(--ink); min-height: 100vh;
+    background:
+      radial-gradient(900px 600px at 100% 0%, #e6e0fb 0%, transparent 60%),
+      radial-gradient(700px 500px at 0% 100%, #f7e9e4 0%, transparent 60%),
+      var(--bg);
+    background-attachment: fixed;
+    font: 18px/1.7 var(--serif);
   }
-  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
-  header { margin-bottom: 24px; }
-  .back { display: inline-block; margin-bottom: 18px; text-decoration: none; color: var(--muted); }
-  .back:hover { color: var(--text); }
-  .title { display: flex; align-items: center; gap: 14px; }
-  .title img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
-  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 6px; }
-  .meta { color: var(--muted); margin: 0; }
-  section { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 4px 20px 12px; margin: 14px 0; }
-  h2 { font-size: 1.15rem; margin: 16px 0 6px; }
-  p, li { color: #e4e4f2; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); color: var(--ink); letter-spacing: -0.02em; }
+  .eyebrow { font: 500 0.85rem/1 var(--mono); color: var(--accent); margin: 0 0 8px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 10px;
+    font: 600 0.95rem/1 var(--mono); text-decoration: none; border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 24px rgba(74,51,179,0.25); }
+  .btn-ghost { background: rgba(255,255,255,0.6); color: var(--ink); border-color: var(--line); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+  main { max-width: 780px; margin: 0 auto; padding: 44px 20px 64px; }
+  header { margin-bottom: 28px; }
+  .back { display: inline-block; margin-bottom: 22px; font: 500 0.85rem/1 var(--mono); text-decoration: none; }
+  .title { display: flex; align-items: center; gap: 16px; }
+  .title img { width: 60px; height: 60px; border-radius: 15px; box-shadow: 0 8px 20px rgba(27,24,52,0.2); }
+  h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.05; margin: 0 0 10px; font-weight: 800; }
+  .meta { font: 500 0.82rem/1.6 var(--mono); color: var(--muted); margin: 0; }
+  code { font-family: var(--mono); font-size: 0.85em; background: var(--accent-soft); color: var(--accent); padding: 1px 6px; border-radius: 6px; }
+  section { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 6px 24px 14px; margin: 16px 0; }
+  h2 { font-size: 1.35rem; margin: 18px 0 6px; font-weight: 600; }
+  p, li { color: #3c3954; }
   ul { padding-left: 1.2em; }
   li { margin: 4px 0; }
-  a { color: var(--accent); overflow-wrap: anywhere; }
-  code { background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 6px; }
-  strong { color: var(--text); }
-  .summary { border-color: var(--gold); background: rgba(255,205,60,0.07); }
-  .summary h2 { color: var(--gold); }
-  footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  a { overflow-wrap: anywhere; }
+  .summary { background: var(--accent-soft); border-color: #d3cbf5; }
+  .summary h2 { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font: 500 0.82rem/1.6 var(--mono); }
+  @media (max-width: 600px) { body { font-size: 17px; } section { padding: 4px 18px 12px; } }
 </style>
 </head>
 <body>
